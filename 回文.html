@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //偶數
+        //aa  abba abccba  aabbaa        abcddcba
+        //(1-2) (1-4 2-3)  (1-6 2-5 3-4) (1-8 2-7 3-6 4-5)  ->x
+        //(0-1) (0-3 1-2)  (0-5 1-4 2-3) (0-7 1-6 2-5 3-4)
+        //length-n  ->x
+        //(length-1)-n
+
+        //奇數
+        // a aba   abcba     abcdcba
+        // 0 (0-2) (0-4 1-3) (0-6 1-5 2-4)
+        //(length-1)-n
+
+
+
+
+        const isPalindrome = (text) => {
+            for (const i in text ){
+                if(text[i] !== text[(text.length-1)-i]){
+                    // console.log(false)
+                    return false
+                }else{
+                    // console.log(true)
+                    return true
+                }
+            }
+            }
+        const result = isPalindrome(prompt('輸入文字'))
+        console.log(result)
+    </script>
+</body>
+</html>
